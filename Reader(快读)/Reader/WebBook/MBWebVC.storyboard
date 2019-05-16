@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="us1-Bm-tNG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--WebVC-->
+        <scene sceneID="j28-P0-QBy">
+            <objects>
+                <viewController id="us1-Bm-tNG" customClass="MBWebVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qe9-9P-pwy"/>
+                        <viewControllerLayoutGuide type="bottom" id="MHG-S1-B2y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="31W-Q2-wMF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYH-Gd-eDn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" tag="998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSP-4i-GlL">
+                                        <rect key="frame" x="0.0" y="20" width="122" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="7MD-uc-fOp"/>
+                                            <constraint firstAttribute="width" constant="122" id="dwO-es-IcZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <inset key="titleEdgeInsets" minX="-110" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="返回" image="nav_back_white"/>
+                                        <connections>
+                                            <action selector="backVC:" destination="us1-Bm-tNG" eventType="touchUpInside" id="Ayt-rX-RB1"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZu-2X-s3A">
+                                        <rect key="frame" x="87" y="20" width="200" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="DUl-Ij-HiA"/>
+                                            <constraint firstAttribute="height" constant="44" id="RBV-ov-Trh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.26659506559371948" green="0.71464836597442627" blue="0.72902435064315796" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="LZu-2X-s3A" firstAttribute="top" secondItem="wYH-Gd-eDn" secondAttribute="top" constant="20" id="R9a-5k-kUz"/>
+                                    <constraint firstAttribute="height" constant="64" id="S7K-Qu-nFM"/>
+                                    <constraint firstItem="FSP-4i-GlL" firstAttribute="top" secondItem="wYH-Gd-eDn" secondAttribute="top" constant="20" id="U0J-Zc-psi"/>
+                                    <constraint firstItem="LZu-2X-s3A" firstAttribute="centerX" secondItem="wYH-Gd-eDn" secondAttribute="centerX" id="hYx-ar-vpm"/>
+                                    <constraint firstItem="FSP-4i-GlL" firstAttribute="leading" secondItem="wYH-Gd-eDn" secondAttribute="leading" id="nS6-mU-2cB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wYH-Gd-eDn" secondAttribute="trailing" id="3jo-Ex-Eqj"/>
+                            <constraint firstItem="wYH-Gd-eDn" firstAttribute="top" secondItem="31W-Q2-wMF" secondAttribute="top" id="omS-ti-iaE"/>
+                            <constraint firstItem="wYH-Gd-eDn" firstAttribute="leading" secondItem="31W-Q2-wMF" secondAttribute="leading" id="w6u-Xo-gv7"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="vcTitle" destination="LZu-2X-s3A" id="8fr-1l-V7x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5qA-FE-WM4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="110" y="128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="nav_back_white" width="85" height="44"/>
+    </resources>
+</document>

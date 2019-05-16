@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IPh-yW-UHU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Book Cats View Controller-->
+        <scene sceneID="6fa-4y-0Lg">
+            <objects>
+                <viewController id="IPh-yW-UHU" customClass="YBookCatsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hwu-RT-kfM"/>
+                        <viewControllerLayoutGuide type="bottom" id="UHT-Q6-N5C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i5s-va-Xnn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqx-u4-vGj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxZ-l2-x0P">
+                                        <rect key="frame" x="0.0" y="20" width="122" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="30f-Ag-uaG"/>
+                                            <constraint firstAttribute="width" constant="122" id="tbw-nl-aY7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <inset key="titleEdgeInsets" minX="-110" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="返回" image="nav_back_white"/>
+                                        <connections>
+                                            <action selector="popVC:" destination="IPh-yW-UHU" eventType="touchUpInside" id="ahH-fk-sGc"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分类" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PL-CB-Z1p">
+                                        <rect key="frame" x="117" y="20" width="140" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="FtX-fi-iKc"/>
+                                            <constraint firstAttribute="width" constant="140" id="Jpr-V0-CNe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25306725499999999" green="0.69158762689999997" blue="0.87103277440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="9tG-R6-vMb"/>
+                                    <constraint firstItem="5PL-CB-Z1p" firstAttribute="centerX" secondItem="bqx-u4-vGj" secondAttribute="centerX" id="Gnv-lK-hIO"/>
+                                    <constraint firstItem="gxZ-l2-x0P" firstAttribute="leading" secondItem="bqx-u4-vGj" secondAttribute="leading" id="XmT-eG-mgT"/>
+                                    <constraint firstItem="5PL-CB-Z1p" firstAttribute="top" secondItem="bqx-u4-vGj" secondAttribute="top" constant="20" id="idv-7r-hF4"/>
+                                    <constraint firstItem="gxZ-l2-x0P" firstAttribute="top" secondItem="bqx-u4-vGj" secondAttribute="top" constant="20" id="rT9-HX-rm0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25539314746856689" green="0.69015222787857056" blue="0.87002307176589966" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bqx-u4-vGj" firstAttribute="leading" secondItem="i5s-va-Xnn" secondAttribute="leading" id="LQL-Jb-E9T"/>
+                            <constraint firstAttribute="trailing" secondItem="bqx-u4-vGj" secondAttribute="trailing" id="ReX-TS-eIr"/>
+                            <constraint firstItem="bqx-u4-vGj" firstAttribute="top" secondItem="i5s-va-Xnn" secondAttribute="top" id="hKC-W3-dcj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="stateCons" destination="hKC-W3-dcj" id="BUm-UQ-r4g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pTH-FI-SPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64.799999999999997" y="32.833583208395808"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="nav_back_white" width="85" height="44"/>
+    </resources>
+</document>

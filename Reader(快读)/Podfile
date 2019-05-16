@@ -1,0 +1,55 @@
+platform :ios, "8.0"
+
+target 'KuaiDu' do
+inhibit_all_warnings!
+
+    pod 'AFNetworking'
+    pod 'SDWebImage'
+    pod 'YYCache'
+    pod 'YYModel'
+    pod 'YYCategories'
+    pod 'CocoaLumberjack'
+    pod 'MJRefresh'
+    pod 'MBProgressHUD'
+
+#datas
+    pod 'Firebase/Core'
+    pod 'Firebase/AdMob'
+
+    pod 'Fabric'
+    pod 'Crashlytics'
+    
+    pod 'UMengAnalytics'
+    
+#share
+#    pod 'ShareSDK3'
+#    pod 'MOBFoundation'
+#    pod 'ShareSDK3/ShareSDKExtension'
+#    pod 'ShareSDK3/ShareSDKUI'
+#    pod 'ShareSDK3/ShareSDKPlatforms/QQ'
+#    pod 'ShareSDK3/ShareSDKPlatforms/SinaWeibo'
+#    pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
+
+    # 公共库(必须)
+    pod 'MOBFoundation'
+    # 主模块(必须)
+    pod 'ShareSDK2'
+    # UI模块(含所有UI样式,可选)
+    pod 'ShareSDK2/UI'
+    # 新浪微博(可选)
+    pod 'ShareSDK2/Connection/SinaWeibo'
+    # 微信(可选)
+    pod 'ShareSDK2/Connection/WeChat'
+    # 腾讯QQ(可选)
+    pod 'ShareSDK2/Connection/QQ'
+    # QQ空间(可选)
+    pod 'ShareSDK2/Connection/QZone'
+    # 短信(可选)
+    pod 'ShareSDK2/Connection/SMS'
+    # 邮件(可选)
+    pod 'ShareSDK2/Connection/Mail'
+    # 拷贝(可选)
+    pod 'ShareSDK2/Connection/Copy'
+
+    pod 'JPush'
+end

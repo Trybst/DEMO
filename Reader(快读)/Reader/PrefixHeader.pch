@@ -1,0 +1,48 @@
+//
+//  PrefixHeader.pch
+//  Reader
+//
+//  Created by Bing Ma on 2017/1/24.
+//  Copyright © 2017年 Hannb. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#import <YYModel/YYModel.h>
+#import <YYCache/YYCache.h>
+#import <YYCategories/YYCategories.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
+#import <AFNetworking/AFNetworking.h>
+#import <MJRefresh/MJRefresh.h>
+
+#import <UMMobClick/MobClick.h>
+
+#import "YProgressHUD.h"
+#import "YBaseViewController.h"
+#import "YUniversal.h"
+#import "YURLManager.h"
+
+// Book Ads.
+#define kINV_ID	     @""//@"ca-app-pub-8372750357813473/1573846141"
+#define kBANNER_ID   @""//@"ca-app-pub-8372750357813473/9097112947"
+
+#ifdef DEBUG
+static const int ddLogLevel = DDLogLevelVerbose;
+#else
+static const int ddLogLevel = DDLogLevelWarning;
+#endif
+
+#define kMBRandomColor [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1]
+#define kMBColor(r, g, b, a) [UIColor colorWithRed:(r/255.0) green:(g/255.0) blue:(b/255.0) alpha:a]
+#define MB_ADMOB_INTERSTITIAL_ID  @"ca-app-pub-8372750357813473/1465134545"
+
+#define IS_iPhoneX ([UIScreen mainScreen].bounds.size.width == 375 && [UIScreen mainScreen].bounds.size.height == 812)
+#define IS_iOS11 @available(iOS 11.0, *)
+
+#endif /* PrefixHeader_pch */
