@@ -906,7 +906,6 @@
 				1DCFABF61E373F6C006EF3A3 /* Sources */,
 				1DCFABF71E373F6C006EF3A3 /* Frameworks */,
 				1DCFABF81E373F6C006EF3A3 /* Resources */,
-				ED9CCE61F721998C4C7247BE /* [CP] Embed Pods Frameworks */,
 				5A4E0EBCBA37953B6848E788 /* [CP] Copy Pods Resources */,
 				1D0075521E3753B500F7BF5D /* ShellScript */,
 			);
@@ -930,7 +929,7 @@
 				TargetAttributes = {
 					1DCFABF91E373F6C006EF3A3 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = KB3CNKVKG3;
+						DevelopmentTeam = 59TX2V4Z3V;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -1031,13 +1030,36 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KuaiDu/Pods-KuaiDu-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/ShareSDK2/ShareSDK/Core/Resource.bundle",
+				"${PODS_ROOT}/ShareSDK2/ShareSDK/Core/zh-Hans.lproj",
+				"${PODS_ROOT}/ShareSDK2/ShareSDK/Core/en.lproj",
+				"${PODS_ROOT}/ShareSDK2/ShareSDK/Extend/QQConnectSDK/TencentOpenApi_IOS_Bundle.bundle",
+				"${PODS_ROOT}/ShareSDK2/ShareSDK/Extend/SinaWeiboSDK/WeiboSDK.bundle",
+				"${PODS_ROOT}/ShareSDK2/ShareSDK/UI/ShareSDKFlatShareViewUI.bundle",
+				"${PODS_ROOT}/ShareSDK2/ShareSDK/UI/ShareSDKiPadDefaultShareViewUI.bundle",
+				"${PODS_ROOT}/ShareSDK2/ShareSDK/UI/ShareSDKiPadSimpleShareViewUI.bundle",
+				"${PODS_ROOT}/ShareSDK2/ShareSDK/UI/ShareSDKiPhoneDefaultShareViewUI.bundle",
+				"${PODS_ROOT}/ShareSDK2/ShareSDK/UI/ShareSDKiPhoneSimpleShareViewUI.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Resource.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/zh-Hans.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/en.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TencentOpenApi_IOS_Bundle.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareSDKFlatShareViewUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareSDKiPadDefaultShareViewUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareSDKiPadSimpleShareViewUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareSDKiPhoneDefaultShareViewUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ShareSDKiPhoneSimpleShareViewUI.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KuaiDu/Pods-KuaiDu-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KuaiDu/Pods-KuaiDu-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A164587E130B6DD1F892780E /* [CP] Check Pods Manifest.lock */ = {
@@ -1046,28 +1068,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KuaiDu-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		ED9CCE61F721998C4C7247BE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KuaiDu/Pods-KuaiDu-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1293,7 +1303,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Reader/Reader.entitlements;
-				DEVELOPMENT_TEAM = KB3CNKVKG3;
+				DEVELOPMENT_TEAM = 59TX2V4Z3V;
 				GCC_PREFIX_HEADER = Reader/PrefixHeader.pch;
 				INFOPLIST_FILE = Reader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1309,7 +1319,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Reader/Reader.entitlements;
-				DEVELOPMENT_TEAM = KB3CNKVKG3;
+				DEVELOPMENT_TEAM = 59TX2V4Z3V;
 				GCC_PREFIX_HEADER = Reader/PrefixHeader.pch;
 				INFOPLIST_FILE = Reader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
